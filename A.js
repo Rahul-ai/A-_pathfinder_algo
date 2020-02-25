@@ -3,11 +3,9 @@ for(var i=arr.length -1;i>=0;i--){
 if(arr[i] == elt){
 arr.splice(i,1);
 }
-
 }
-
 }
- function heuristic(a,b){
+function heuristic(a,b){
 var d= dist(a.i,a.j,b.i,b.j);
 return d;
 }
@@ -96,13 +94,6 @@ start.wall=false;
 openSet.push(start);
 console.log(grid);
 }
-
-
-
-
-
-
-
 function draw(){
 // Doing the recursion job
 if (openSet.length>0){
@@ -143,27 +134,12 @@ neighbor.previous=current;
 } 
 }
 }
-
-
-
-
-
-
 else{
 console.log("no Solution");
 nosolution=true;
 noloop();
 }
-
-
 background(0);
-
-
-
-
-
-
-
 for(var i=0;i<cols;i++){
 for(var j=0;j<rows;j++){
 grid[i][j].show(color(255));
